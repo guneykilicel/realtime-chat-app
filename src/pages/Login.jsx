@@ -14,7 +14,7 @@ const Login = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/realtime-chat-app")
+      navigate("/")
     } catch (err) {
       setErr(true);
     }
@@ -30,7 +30,7 @@ const Login = () => {
           <button>Sign in</button>
           {err && <span>Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/realtime-chat-app/register">Register</Link></p>
+        <p>You don't have an account? <Link to="/register">Register</Link></p>
       </div>
     </div>
   );
