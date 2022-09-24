@@ -45,7 +45,7 @@ const Register = () => {
 
             //create empty user chats on firestore
             await setDoc(doc(db, "userChats", res.user.uid), {});
-            navigate("/");
+            navigate("/realtime-chat-app");
           } catch (err) {
             console.log(err);
             setErr(true);
@@ -78,7 +78,7 @@ const Register = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>
-          You do have an account? <Link to="/register">Login</Link>
+          You do have an account? <Link to="/realtime-chat-app/login">Login</Link>
         </p>
       </div>
     </div>
